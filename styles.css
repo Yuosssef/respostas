@@ -34,3 +34,17 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.hidden {
+    display: none;
+}
+
+.botao-lista {
+    background-color: #ff5722; 
+    color: #fff; 
+}
+
+
+.botao-lista:hover {
+    background-color: #bf360c;
+}
