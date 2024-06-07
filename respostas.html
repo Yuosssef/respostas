@@ -13,39 +13,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>Atividade Lista</h1>
+        <h1>Respostas</h1>
         <div id="lista1" class="hidden">
-            <h2>Atividades da Lista 1</h2>
-            <button onclick="L1A1()">Calcular Média</button> <br>
-            <button onclick="L1A2()">Comparar Números</button> <br>
-            <button onclick="L1A3()">Calcular Comissão</button> <br>
-            <button onclick="L1A4()">Calcular Aceleração</button> <br>
-            <button onclick="L1A5()">Calcular Descontos</button> <br>
-            <button onclick="L1A6()">Verificar Letras</button> <br>
-            <button onclick="L1A7()">Calcular IMC</button> <br>
-            <button onclick="L1A8()">Conversor Fahrenheit para Celsius</button> <br>
+            <h2>Atividades da Lista 1</h2><br>
+            <button onclick="L1A1()">1- Calcular Média</button> <br>
+            <button onclick="L1A2()">2- Comparar Números</button> <br>
+            <button onclick="L1A3()">3- Calcular Comissão</button> <br>
+            <button onclick="L1A4()">4- Calcular Aceleração</button> <br>
+            <button onclick="L1A5()">5- Calcular Descontos</button> <br>
+            <button onclick="L1A6()">6- Verificar Letras</button> <br>
+            <button onclick="L1A7()">7- Calcular IMC</button> <br>
+            <button onclick="L1A8()">8- Conversor Fahrenheit para Celsius</button> <br>
+            <button onclick="L1A9()">9- Verificar Par ou Impar</button> <br>
+            <button onclick="L1A10()">10- Calcular Area do Triangulo</button> <br>
+            <button onclick="L1A11()">11- Converter Reais para Dolar</button> <br>
+            <button onclick="L1A12()">12- Encontrar Maior Número</button> <br>
+            <button onclick="L1A13()">13- Converter Reais para Euro</button> <br>
+
         </div>
-        <button onclick="toggleOpcoes('lista1')">Mostrar Lista 1</button>
+        <button class="botao" onclick="toggleOpcoes('lista1')">Mostrar Lista 1</button>
         
         <div id="lista2" class="hidden">
             <h2>Atividades da Lista 2</h2>
             <button>Calcular Descontos</button> <br>
         </div>
-        <button onclick="toggleOpcoes('lista2')">Mostrar Lista 2</button>
+        <button class="botao" onclick="toggleOpcoes('lista2')">Mostrar Lista 2</button>
         
         <div id="lista3" class="hidden">
             <h2>Atividades da Lista 3</h2>
-            <!-- Aqui você pode adicionar as opções para a Lista 3 -->
+            <button>Calcular Descontos</button> <br>
         </div>
-        <button onclick="toggleOpcoes('lista3')">Mostrar Lista 3</button>
+        <button class="botao" onclick="toggleOpcoes('lista3')">Mostrar Lista 3</button>
+        
+        <div id="lista4" class="hidden">
+            <h2>Atividades da Lista 4</h2>
+            <button>Calcular Descontos</button> <br>
+        </div>
+        <button class="botao" onclick="toggleOpcoes('lista4')">Mostrar Lista 4</button>
         
         <script src="respostas.js"></script>
-        <script>
-            function toggleOpcoes(listaId) {
-                var lista = document.getElementById(listaId);
-                lista.classList.toggle("hidden");
-            }
-        </script>
     </div>
 </body>
 </html>
