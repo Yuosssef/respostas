@@ -1,3 +1,15 @@
+function toggleOpcoes(listaId) {
+  var lista = document.getElementById(listaId);
+  lista.classList.toggle("hidden");
+}
+
+
+
+
+
+
+
+
 function L1A1() {
 
     const qnt = Number(prompt("Digite a quantia de números que você deseja calcular a média"));
@@ -227,7 +239,90 @@ function L1A2() {
   
 
   
-  
+  function L1A9() {
+    let num = Number(prompt(`Digite um número:`));
+    let num2 = Number(prompt(`Digite outro número:`));
+
+    if (num % 2 === 0 && num2 % 2 === 0) {
+        alert("Dois números são pares");
+    } else if (num % 2 === 1 && num2 % 2 === 1) {
+        alert("Dois números são ímpares");
+    } else {
+        alert("Um número é ímpar e um número é par");
+    }
+}
+
+
+
+
+
+function L1A10() {
+  let altura, base;
+  do {
+      altura = Number(prompt("Digite a altura do triângulo:"));
+      base = Number(prompt("Digite a base do triângulo:"));
+
+      if (altura <= 0 || base <= 0 || isNaN(altura) || isNaN(base)) {
+          console.log("Por favor, digite valores válidos para altura e base.");
+      }
+  } while (altura <= 0 || base <= 0 || isNaN(altura) || isNaN(base));
+
+  let area = (altura * base) / 2;
+  alert(`A área do triângulo é ${area}`);
+}
+
+
+
 
   
-  
+
+function L1A11() {
+  let reais, taxa;
+  do {
+      reais = Number(prompt("Digite o valor em reais:"));
+      if (reais <= 0 || isNaN(reais)) {
+          alert("Por favor, digite um valor válido para reais.");
+      }
+  } while (reais <= 0 || isNaN(reais));
+
+  do {
+      taxa = Number(prompt("Digite a taxa de conversão:"));
+      if (taxa <= 0 || isNaN(taxa)) {
+          alert("Por favor, digite uma taxa válida de conversão.");
+      }
+  } while (taxa <= 0 || isNaN(taxa));
+
+  let dolar = reais / taxa;
+  alert(`O valor em dólar é de ${dolar}`);
+}
+
+
+
+function L1A12() {
+  let num1 = Number(prompt("Digite o primeiro número"));
+  let num2 = Number(prompt("Digite o segundo número"));
+  let num3 = Number(prompt("Digite o terceiro número"));
+
+  if (num1 > num2 && num1 > num3) {
+      alert("O número 1 é o maior");
+  } else if (num2 > num1 && num2 > num3) {
+      alert("O número 2 é o maior");
+  } else {
+      alert("O número 3 é o maior");
+  }
+}
+
+
+
+function L1A13() {
+  let reais = Number(prompt("Digite o valor em reais:"));
+  let taxa = Number(prompt("Digite a taxa de conversão:"));
+
+  let euro = reais / taxa;
+
+  alert(`O valor em euro é de ${euro.toFixed(2)} €`);
+}
+
+
+
+
