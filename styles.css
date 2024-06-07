@@ -1,23 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #81ccd4;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #b2ede5;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    font-size: 75px;
+    color: #000;
+    font-family: fantasy;
 }
+
 
 button {
     padding: 10px 20px;
@@ -36,15 +39,20 @@ button:hover {
 }
 
 .hidden {
+    
     display: none;
-}
 
-.botao-lista {
-    background-color: #ff5722; 
-    color: #fff; 
 }
 
 
-.botao-lista:hover {
-    background-color: #bf360c;
+.botao {
+    
+    background-color: #322aa7;
 }
+
+
+.botao:hover {
+    
+    background-color: #498ed7;
+}
+
