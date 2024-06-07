@@ -1,10 +1,8 @@
 
   
   
+  function L1A1(qnt) {
   
-  function L1A1() {
-  
-      const qnt = Number(prompt("Digite a quantia de números que você deseja calcular a média"));
       let soma = 0
   
       for(let i = 1; i <= qnt; i++){
@@ -27,9 +25,8 @@
   
   
   
-  function L1A2() {
-      let num1 = Number(prompt("Digite o primeiro número"));
-      let num2 = Number(prompt("Digite o segundo número"));
+  function L1A2(num1, num2) {
+      
     
       if (num1 > num2) {
         alert(`O número ${num1} é maior que o número ${num2}`);
@@ -47,9 +44,8 @@
   
   
   
-    function L1A3() {
+    function L1A3(venda) {
       const comi = 0.05;
-      let venda = Number(prompt("Digite o valor da venda"));
       let salario = venda * comi;
     
       alert(`A comissão da venda é R$ ${salario.toFixed(2)}`);
@@ -58,47 +54,8 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    function L1A4() {
-      let kmini;
-      let kmfim;
-      let tempo;
-      do{
-          kmini = Number(prompt("Digite o km inicial "));
-  
-          if(kmini < 0){
-              alert(`O Km inícial não pode ser menor que 0 !`)
-          }
-  
-      }  while(  kmini < 0)
-  
-      do{
-          kmfim = Number(prompt("Digite o km final "));
-  
-          if(kmfim < kmini){
-              alert(`O Km final não pode ser menor que o Km  Inícial !`)
-          }
-  
-      } while(kmfim < kmini)
-  
-      
-      do {
-  
-          tempo = Number(prompt("Digite o tempo em segundos:"));
-          
-          if(tempo < 0){
-              alert(`O tempo não pode ser negativo !`)
-          }
-  
-      } while (tempo <= 0);
+    function L1A4(kmini, kmfim, tempo) {
+    
   
       let dist = kmfim - kmini;
       let velo = dist / tempo;
@@ -107,11 +64,6 @@
       alert(`A aceleração foi de ${acel.toFixed(2)} metros por segundo ao quadrado`);
     }
     
-  
-  
-  
-  
-  
   
   
   
@@ -336,16 +288,49 @@ let opcao = Number(prompt(
 
 switch (opcao) {
     case 1:
-        L1A1();
+        const qnt = Number(prompt("Digite a quantia de números que você deseja calcular a média"));
+
+        L1A1(qnt);
         break;
     case 2:
-        L1A2();
+        let num1 = Number(prompt("Digite o primeiro número"));
+        let num2 = Number(prompt("Digite o segundo número"));
+        L1A2(num1, num2);
         break;
     case 3:
-        L1A3();
+        let venda = Number(prompt("Digite o valor da venda"));
+        L1A3(venda);
         break;
     case 4:
-        L1A4();
+        do{
+            let kmini = Number(prompt("Digite o km inicial "));
+    
+            if(kmini < 0){
+                alert(`O Km inícial não pode ser menor que 0 !`)
+            }
+    
+        }  while(  kmini < 0)
+    
+        do{
+            let kmfim = Number(prompt("Digite o km final "));
+    
+            if(kmfim < kmini){
+                alert(`O Km final não pode ser menor que o Km  Inícial !`)
+            }
+    
+        } while(kmfim < kmini)
+    
+        
+        do {
+    
+            let tempo = Number(prompt("Digite o tempo em segundos:"));
+            
+            if(tempo < 0){
+                alert(`O tempo não pode ser negativo !`)
+            }
+    
+        } while (tempo <= 0);
+        L1A4(kmini, kmfim, tempo);
         break;
     case 5:
         L1A5();
