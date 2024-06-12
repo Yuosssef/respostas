@@ -481,30 +481,31 @@ function lista2(){
       }
     }
     
-    function L2A3() {
-      const num = Number(prompt("Digite um número para verificar se é múltiplo de 3 e/ou 5:"));
-    
-      if (num % 3 === 0 && num % 5 === 0) {
+    function L2A3(NUM) {
+    do{
+      if (NUM % 3 === 0 && NUM % 5 === 0) {
           console.log("Múltiplo de 3 e 5")
-      } else if (num % 3 === 0) {
+      } else if (NUM % 3 === 0) {
           console.log("Múltiplo de 3 ")
-      } else if (num % 5 === 0) {
+      } else if (NUM % 5 === 0) {
           console.log("Múltiplo de 5")
       } else {
           console.log("Não é múltiplo de 3 nem de 5");
       }
+
+      if (isNaN(NUM)) {
+        alert("Por favor, digite um número válido.")}
+    }while(isNaN(NUM))
     }
     
-    function L2A4() {
-      const dist = Number(prompt("Digite a distância em km:"));
-      const vel = Number(prompt("Digite a velocidade do carro em km/h:"));
+    function L2A4(dist, vel) {
+      
       const tempo = dist / vel;
     
       console.log(`Tempo de viagem: ${tempo} horas`);
     }
     
-    function L2A5() {
-      const valorC = Number(prompt("Digite o valor da compra:"));
+    function L2A5(valorC) {
       let desconto;
       let valorD;
       let valorF;
@@ -525,11 +526,10 @@ function lista2(){
       console.log(`Valor com desconto: R$ ${valorF}`);
     }
     
-    function L2A6() {
-      let nota1, nota2, media, exame, novaMedia;
+    function L2A6(nota1, nota2) {
+      let media, novaMedia, exame;
     
-      nota1 = Number(prompt("Digite a nota da primeira prova:"));
-      nota2 = Number(prompt("Digite a nota da segunda prova:"));
+      
     
       media = (nota1 + nota2) / 2;
     
@@ -553,17 +553,8 @@ function lista2(){
       }
     }
     
-    function L2A7() {
-      let produto1 = {};
-      let produto2 = {};
-    
-      produto1.codigo = Number(prompt("Digite o código do primeiro produto:"));
-      produto1.nome = prompt("Digite o nome do primeiro produto:");
-      produto1.valor = Number(prompt("Digite o valor do primeiro produto:"));
-    
-      produto2.codigo = Number(prompt("Digite o código do segundo produto:"));
-      produto2.nome = prompt("Digite o nome do segundo produto:");
-      produto2.valor = Number(prompt("Digite o valor do segundo produto:"));
+    function L2A7(produto1, produto2) {
+      
     
       if (produto1.valor > produto2.valor) {
           console.log(`Produto com maior valor: Código ${produto1.codigo}\n Nome ${produto1.nome}\n Valor R$ ${produto1.valor}`);
@@ -593,7 +584,7 @@ function lista2(){
       switch (Opcao) {
           case 1:
 
-          const escolha = Number(prompt(
+            const escolha = Number(prompt(
             'Digite um número de (1-6) para definir qual temperatura deseja ser convertida:\n' +
             '1: Celsius para Kelvin\n' +
             '2: Kelvin para Celsius\n' +
@@ -601,29 +592,59 @@ function lista2(){
             '4: Fahrenheit para Celsius\n' +
             '5: Fahrenheit para Kelvin\n' +
             '6: Kelvin para Fahrenheit\n'
-        ));
+            ));
+
               L2A1(escolha);
               break;
           case 2:
 
-          const palavra = prompt(`Digite a palavra que você deseja verificar se é palíndromo`);
+            const palavra = prompt(`Digite a palavra que você deseja verificar se é palíndromo`);
 
               L2A2(palavra);
               break;
           case 3:
-              L2A3();
+
+            const NUM = Number(prompt("Digite um número para verificar se é múltiplo de 3 e/ou 5:"));
+
+              L2A3(NUM);
               break;
           case 4:
-              L2A4();
+
+
+            const dist = Number(prompt("Digite a distância em km:"));
+            const vel = Number(prompt("Digite a velocidade do carro em km/h:"));
+
+              L2A4(dist, vel);
               break;
           case 5:
-              L2A5();
+
+            const valorC = Number(prompt("Digite o valor da compra:"));
+
+              L2A5(valorC);
               break;
           case 6:
-              L2A6();
+
+          let nota1, nota2;
+
+          nota1 = Number(prompt("Digite a nota da primeira prova:"));
+          nota2 = Number(prompt("Digite a nota da segunda prova:"));
+
+              L2A6(nota1, nota2);
               break;
           case 7:
-              L2A7();
+
+          let produto1 = {};
+          let produto2 = {};
+        
+          produto1.codigo = Number(prompt("Digite o código do primeiro produto:"));
+          produto1.nome = prompt("Digite o nome do primeiro produto:");
+          produto1.valor = Number(prompt("Digite o valor do primeiro produto:"));
+        
+          produto2.codigo = Number(prompt("Digite o código do segundo produto:"));
+          produto2.nome = prompt("Digite o nome do segundo produto:");
+          produto2.valor = Number(prompt("Digite o valor do segundo produto:"));
+
+                L2A7(produto1, produto2);
               break;
           default:
               console.log("Número inválido! Por favor, digite um número entre 1 e 7.");
